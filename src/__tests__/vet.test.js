@@ -279,4 +279,125 @@ describe('vet.js', () => {
         expect(result).toHaveLength(22)
         expect(result).toEqual(expected);
     });
+    it('will return all the animals younger than 5, and all the animals older than 15, as they may require special attention', () => {
+        const result = vet.getSpecialAttention()
+        const expected = [
+            {
+              id: 2,
+              fee: 697,
+              owner: { first_name: 'Andrew', last_name: 'Carlson' },
+              animal: { age: 24, name: 'Carl', type: 'Cat', gender: 'male' }
+            },
+            {
+              id: 3,
+              fee: 964,
+              owner: { first_name: 'Portia', last_name: 'Bailles' },
+              animal: { age: 22, name: 'Fayre', type: 'Bat', gender: 'female' }
+            },
+            {
+              id: 4,
+              fee: 799,
+              owner: { first_name: 'Maurie', last_name: 'Dunnion' },
+              animal: { age: 25, name: 'Cary', type: 'Cat', gender: 'female' }
+            },
+            {
+              id: 5,
+              fee: 534,
+              owner: { first_name: 'Kelsey', last_name: 'Elgie' },
+              animal: { age: 17, name: 'Joelie', type: 'Bear', gender: 'female' }
+            },
+            {
+              id: 6,
+              fee: 1310,
+              owner: { first_name: 'Astra', last_name: 'Ghelerdini' },
+              animal: { age: 18, name: 'Towney', type: 'Iguana', gender: 'male' }
+            },
+            {
+              id: 8,
+              fee: 470,
+              owner: { first_name: 'Brandy', last_name: 'Fownes' },
+              animal: { age: 23, name: 'Jaynell', type: 'Pheasant', gender: 'female' }
+            },
+            {
+              id: 9,
+              fee: 654,
+              owner: { first_name: 'Sabine', last_name: 'Balham' },
+              animal: { age: 15, name: 'Issy', type: 'Bandicoot', gender: 'female' }
+            },
+            {
+              id: 10,
+              fee: 205,
+              owner: { first_name: 'Ainsley', last_name: 'Bartak' },
+              animal: { age: 25, name: 'Ira', type: 'Cat', gender: 'male' }
+            },
+            {
+              id: 11,
+              fee: 1328,
+              owner: { first_name: 'Margeaux', last_name: 'Ladd' },
+              animal: { age: 23, name: 'Wendy', type: 'Ocelot', gender: 'female' }
+            },
+            {
+              id: 15,
+              fee: 440,
+              owner: { first_name: 'Thaddus', last_name: 'Wood' },
+              animal: { age: 22, name: 'Vick', type: 'Dog', gender: 'female' }
+            },
+            {
+              id: 16,
+              fee: 1344,
+              owner: { first_name: 'Marja', last_name: 'Sydes' },
+              animal: { age: 19, name: 'Ludwig', type: 'Ox', gender: 'male' }
+            },
+            {
+              id: 17,
+              fee: 665,
+              owner: { first_name: 'Karalee', last_name: 'Rosita' },
+              animal: { age: 15, name: 'Ariel', type: 'Mermaid', gender: 'female' }
+            },
+            {
+              id: 18,
+              fee: 1956,
+              owner: { first_name: 'Korry', last_name: 'Sutch' },
+              animal: { age: 20, name: 'Nonie', type: 'Egret', gender: 'unknown' }
+            },
+            {
+              id: 20,
+              fee: 1409,
+              owner: { first_name: 'Jasmina', last_name: 'Cossem' },
+              animal: { age: 3, name: 'Barnebas', type: 'Heron', gender: 'male' }
+            },
+            {
+              id: 21,
+              fee: 119,
+              owner: { first_name: 'Constantin', last_name: 'Border' },
+              animal: { age: 1, name: 'Cord', type: 'Jaguar', gender: 'male' }
+            },
+            {
+              id: 22,
+              fee: 436,
+              owner: { first_name: 'Elsbeth', last_name: 'Cottier' },
+              animal: { age: 24, name: 'Ailyn', type: 'Gull', gender: 'female' }
+            },
+            {
+              id: 23,
+              fee: 1978,
+              owner: { first_name: 'Lorens', last_name: 'Winyard' },
+              animal: { age: 5, name: 'Noelle', type: 'Rattlesnake', gender: 'unknown' }
+            },
+            {
+              id: 24,
+              fee: 1911,
+              owner: { first_name: 'Shayne', last_name: 'Marrable' },
+              animal: { age: 2, name: 'Katleen', type: 'Alligator', gender: 'female' }
+            },
+            {
+              id: 25,
+              fee: 699,
+              owner: { first_name: 'Reuben', last_name: 'Maunder' },
+              animal: { age: 4, name: 'Lora', type: 'Warthog', gender: 'unknown' }
+            }
+          ]
+        expect(result).toHaveLength(19)
+        expect(result).toEqual(expected);
+    });
 })
