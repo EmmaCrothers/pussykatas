@@ -8,18 +8,20 @@ const loadRecords = () => {
 
 const getCatsAndDogs = () => {
     const records = loadRecords();
-
-    if (records.length >= 1){
-        return records.filter((record) =>  {
-            return record.animal.type==='Dog'|| record.animal.type==='Cat'
+       return records.filter((record) =>  {
+            return record.animal.type==='Dog'|| record.animal.type==='Cat'           
         })
     }
-    else {
-        return []
+
+const getMoreExoticAnimals = () => {
+        const records = loadRecords();
+        const filteredAnimals = records.filter((record) => {
+            return record.animal.type!=='Dog' && record.animal.type!=='Cat'})
+            return filteredAnimals                        
     }
-}
 
 module.exports = {
     loadRecords,
-    getCatsAndDogs
+    getCatsAndDogs,
+    getMoreExoticAnimals
 }
