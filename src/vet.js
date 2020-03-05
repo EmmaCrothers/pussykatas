@@ -20,8 +20,15 @@ const getMoreExoticAnimals = () => {
             return filteredAnimals                        
     }
 
+const getMaleAndFemale = () => {
+    const records = loadRecords();
+    const animalGenders= records.filter((record) => {
+        return record.animal.gender==='male' || record.animal.gender==='female'})
+        return animalGenders
+}
 module.exports = {
     loadRecords,
     getCatsAndDogs,
-    getMoreExoticAnimals
+    getMoreExoticAnimals,
+    getMaleAndFemale
 }
