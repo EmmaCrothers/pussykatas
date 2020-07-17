@@ -420,4 +420,25 @@ describe('vet.js', () => {
       expect(result).toHaveLength(25)
       expect(result).toEqual(expected);
   });
+  it('will return all the owner names in the records', () => {
+    const result = vet.listOwner()
+    const expected =     [
+      'Giovanna Boughey',  'Andrew Carlson',
+      'Portia Bailles',    'Maurie Dunnion',
+      'Kelsey Elgie',      'Astra Ghelerdini',
+      'Philomena Gretton', 'Brandy Fownes',
+      'Sabine Balham',     'Ainsley Bartak',
+      'Margeaux Ladd',     'Desmond Twelvetree',
+      'Maribel Kluger',    'Andra Reame',
+      'Thaddus Wood',      'Marja Sydes',
+      'Karalee Rosita',    'Korry Sutch',
+      'Melly Rockhall',    'Jasmina Cossem',
+      'Constantin Border', 'Elsbeth Cottier',
+      'Lorens Winyard',    'Shayne Marrable',
+      'Reuben Maunder'
+
+    ]
+    expect(result).toHaveLength(25)
+    expect(result).toEqual(expected);
+});
 })

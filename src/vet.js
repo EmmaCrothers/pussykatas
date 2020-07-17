@@ -40,10 +40,18 @@ const getSpecialAttention = () => {
 
 const callOwner = () => {
     const records = loadRecords() 
-    const animalName= records.map((record) => {
+    const animalName = records.map((record) => {
         return record.animal.name + ',' + ' ' + record.owner.last_name
         })
     return animalName
+}
+
+const listOwner = () => {
+    const records = loadRecords() 
+    const ownerName = records.map((record) => {
+        return record.owner.first_name + ' ' + record.owner.last_name
+        })
+    return ownerName
 }
 
 module.exports = {
@@ -52,5 +60,6 @@ module.exports = {
     getMoreExoticAnimals,
     getMaleAndFemale,
     getSpecialAttention,
-    callOwner
+    callOwner, 
+    listOwner
 }
