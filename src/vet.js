@@ -41,27 +41,10 @@ const getSpecialAttention = () => {
 const callOwner = () => {
     const records = loadRecords() 
     const animalName= records.map((record) => {
-        return record.animal.name
+        return record.animal.name + ',' + ' ' + record.owner.last_name
         })
     return animalName
 }
-
-/*const callOwner = () => {
-    const records = loadRecords() 
-    const animalName= records.filter((record) => {
-        return record.animal.name === 'Alysa' && record.owner.last_name === 'Boughey'
-        })
-    return animalName
-}*/
-
-/*
-const callOwner = () => {
-    const records = loadRecords() 
-    const animalName= records.map((record) => {
-        return record.animal.name === 'Alysa' && record.owner.last_name === 'Boughey'
-        })
-    return console.log(animalName)
-}*/
 
 module.exports = {
     loadRecords,

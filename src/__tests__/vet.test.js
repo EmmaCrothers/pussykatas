@@ -403,15 +403,19 @@ describe('vet.js', () => {
     it('will return all the animal names and owner last names in the records', () => {
       const result = vet.callOwner()
       const expected =     [
-        'Alysa',   'Carl',     'Fayre',
-        'Cary',    'Joelie',   'Towney',
-        'Nissy',   'Jaynell',  'Issy',
-        'Ira',     'Wendy',    'Jacobo',
-        'Mirabel', 'Munmro',   'Vick',
-        'Ludwig',  'Ariel',    'Nonie',
-        'Chanda',  'Barnebas', 'Cord',
-        'Ailyn',   'Noelle',   'Katleen',
-        'Lora'
+        'Alysa, Boughey',   'Carl, Carlson',
+        'Fayre, Bailles',   'Cary, Dunnion',
+        'Joelie, Elgie',    'Towney, Ghelerdini',
+        'Nissy, Gretton',   'Jaynell, Fownes',
+        'Issy, Balham',     'Ira, Bartak',
+        'Wendy, Ladd',      'Jacobo, Twelvetree',
+        'Mirabel, Kluger',  'Munmro, Reame',
+        'Vick, Wood',       'Ludwig, Sydes',
+        'Ariel, Rosita',    'Nonie, Sutch',
+        'Chanda, Rockhall', 'Barnebas, Cossem',
+        'Cord, Border',     'Ailyn, Cottier',
+        'Noelle, Winyard',  'Katleen, Marrable',
+        'Lora, Maunder'
       ]
       expect(result).toHaveLength(25)
       expect(result).toEqual(expected);
