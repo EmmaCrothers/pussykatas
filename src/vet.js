@@ -9,7 +9,8 @@ const loadRecords = () => {
 const getCatsAndDogs = () => {
     const records = loadRecords()
     return records.filter((record) =>  {
-        return record.animal.type==='Dog'|| record.animal.type==='Cat'           
+        const domesticPets = record.animal.type==='Dog'|| record.animal.type==='Cat'  
+        return domesticPets         
     })
 }
 
@@ -55,11 +56,11 @@ const listOwner = () => {
 }
 
 const catsAndDogsFees = () => {
-    const records = loadRecords() 
-    const petFees = records.map((record) => {
+    const catAndDogRecords = getCatsAndDogs()
+    const petFees = catAndDogRecords.map((record) => {
         return record.fee
         })
-    return petFees
+    return petFees 
 }
 
 module.exports = {
@@ -70,5 +71,5 @@ module.exports = {
     getSpecialAttention,
     callOwner, 
     listOwner,
-    catsAndDogsFees
+    catsAndDogsFees,
 }
