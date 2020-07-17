@@ -7,32 +7,43 @@ const loadRecords = () => {
 }
 
 const getCatsAndDogs = () => {
-    const records = loadRecords();
+    const records = loadRecords()
     return records.filter((record) =>  {
         return record.animal.type==='Dog'|| record.animal.type==='Cat'           
     })
 }
 
 const getMoreExoticAnimals = () => {
-    const records = loadRecords();
+    const records = loadRecords()
     const filteredAnimals = records.filter((record) => {
-        return record.animal.type!=='Dog' && record.animal.type!=='Cat'})
+        return record.animal.type!=='Dog' && record.animal.type!=='Cat'
+    })
     return filteredAnimals                        
 }
 
 const getMaleAndFemale = () => {
-    const records = loadRecords();
+    const records = loadRecords()
     const animalGenders= records.filter((record) => {
-        return record.animal.gender==='male' || record.animal.gender==='female'})
+        return record.animal.gender==='male' || record.animal.gender==='female'
+    })
     return animalGenders
 }
 
 const getSpecialAttention = () => {
-    const records = loadRecords();
+    const records = loadRecords()
     const animalAges= records.filter((record) => {
-        return record.animal.age<= '5'||record.animal.age>='15'})
+        return record.animal.age<= '5'||record.animal.age>='15'
+    })
     return animalAges
 
+}
+
+const callOwner = () => {
+    const records = loadRecords() 
+    const animalName= records.filter((record) => {
+        return record.animal.name === 'Alysa' && record.owner.last_name === 'Boughey'
+        })
+    return animalName
 }
 
 module.exports = {
@@ -40,5 +51,6 @@ module.exports = {
     getCatsAndDogs,
     getMoreExoticAnimals,
     getMaleAndFemale,
-    getSpecialAttention
+    getSpecialAttention,
+    callOwner
 }

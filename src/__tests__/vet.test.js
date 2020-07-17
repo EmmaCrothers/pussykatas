@@ -400,4 +400,17 @@ describe('vet.js', () => {
         expect(result).toHaveLength(19)
         expect(result).toEqual(expected);
     });
+    it('will return all the animal names and owner last names in the records', () => {
+      const result = vet.callOwner()
+      const expected = [
+        {
+          id: 1,
+          fee: 449,
+          owner: { first_name: 'Giovanna', last_name: 'Boughey' },
+          animal: { age: 11, name: 'Alysa', type: 'Dog', gender: 'female' }
+        }
+      ]
+      expect(result).toHaveLength(1)
+      expect(result).toEqual(expected);
+  });
 })
