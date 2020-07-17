@@ -402,15 +402,18 @@ describe('vet.js', () => {
     });
     it('will return all the animal names and owner last names in the records', () => {
       const result = vet.callOwner()
-      const expected = [
-        {
-          id: 1,
-          fee: 449,
-          owner: { first_name: 'Giovanna', last_name: 'Boughey' },
-          animal: { age: 11, name: 'Alysa', type: 'Dog', gender: 'female' }
-        }
+      const expected =     [
+        'Alysa',   'Carl',     'Fayre',
+        'Cary',    'Joelie',   'Towney',
+        'Nissy',   'Jaynell',  'Issy',
+        'Ira',     'Wendy',    'Jacobo',
+        'Mirabel', 'Munmro',   'Vick',
+        'Ludwig',  'Ariel',    'Nonie',
+        'Chanda',  'Barnebas', 'Cord',
+        'Ailyn',   'Noelle',   'Katleen',
+        'Lora'
       ]
-      expect(result).toHaveLength(1)
+      expect(result).toHaveLength(25)
       expect(result).toEqual(expected);
   });
 })
