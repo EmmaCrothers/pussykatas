@@ -441,4 +441,16 @@ describe('vet.js', () => {
     expect(result).toHaveLength(25)
     expect(result).toEqual(expected);
 });
+it('will return all the fees for cats and dogs', () => {
+  const result = vet.catsAndDogsFees()
+  const expected =     [
+    449,  697,  964,  799,  534,
+    1310, 1255,  470,  654,  205,
+    1328,  559,  239,  324,  440,
+    1344,  665, 1956, 1289, 1409,
+     119,  436, 1978, 1911,  699
+  ]
+  expect(result).toHaveLength(25)
+  expect(result).toEqual(expected);
+});
 })

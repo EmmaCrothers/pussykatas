@@ -54,6 +54,14 @@ const listOwner = () => {
     return ownerName
 }
 
+const catsAndDogsFees = () => {
+    const records = loadRecords() 
+    const petFees = records.map((record) => {
+        return record.fee
+        })
+    return petFees
+}
+
 module.exports = {
     loadRecords,
     getCatsAndDogs,
@@ -61,5 +69,6 @@ module.exports = {
     getMaleAndFemale,
     getSpecialAttention,
     callOwner, 
-    listOwner
+    listOwner,
+    catsAndDogsFees
 }
