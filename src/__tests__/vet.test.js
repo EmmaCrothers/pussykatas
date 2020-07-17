@@ -443,8 +443,7 @@ describe('vet.js', () => {
 });
 it('will return all the fees for cats and dogs', () => {
   const result = vet.catsAndDogsFees()
-  const expected = [ 449, 697, 799, 205, 440, 1289 ]
-  expect(result).toHaveLength(6)
+  const expected = 3879
   expect(result).toEqual(expected);
 });
 })

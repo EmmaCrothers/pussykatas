@@ -60,7 +60,8 @@ const catsAndDogsFees = () => {
     const petFees = catAndDogRecords.map((record) => {
         return record.fee
         })
-    return petFees 
+        const reducer = (accumulator, currentValue) => accumulator + currentValue
+    return petFees.reduce(reducer) 
 }
 
 module.exports = {
